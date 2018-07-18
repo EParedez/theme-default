@@ -32,9 +32,9 @@ import 'element-theme-default/lib/select.css';
 // ...
 ```
 ##  Adding icons
-> open element-icons.ttf with FontForge and save as SVG
-> open SVG in http://fontello.com/, add custom icons(maybe you should customize the names), download webfont file
-> copy webfont file in src/fonts/, and edit icons.css, for example:
+1. open element-icons.ttf with FontForge and save as SVG
+2. open SVG in http://fontello.com/, add custom icons(maybe you should customize the names), download webfont file
+3. copy webfont file in src/fonts/, and edit icons.css, for example:
 ```css
 @font-face {
     font-family: 'element-icons';
@@ -44,3 +44,13 @@ import 'element-theme-default/lib/select.css';
     font-style: normal;
 }
 .el-icon-error:before { content: "\e800"; }
+4. build package, with: 
+```shell
+gulp build 
+or 
+node_modules/gulp/bin/gulp.js build
+5. import in your project, for example:
+```javascript
+"dependencies": {
+   ...
+    "element-theme-default": "file:path/to/package/elementui-theme-custom",
