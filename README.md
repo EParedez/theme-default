@@ -44,13 +44,16 @@ import 'element-theme-default/lib/select.css';
     font-style: normal;
 }
 .el-icon-error:before { content: "\e800"; }
+```
 4. build package, with: 
 ```shell
 gulp build 
 or 
 node_modules/gulp/bin/gulp.js build
+```
 5. import in your project, for example:
 ```javascript
 "dependencies": {
    ...
     "element-theme-default": "file:path/to/package/elementui-theme-custom",
+```
